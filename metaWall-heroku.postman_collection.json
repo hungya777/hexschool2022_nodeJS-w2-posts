@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "098f4403-a09c-43f0-b0f2-9c65ea6ca641",
+		"name": "metaWall-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19883143"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{metaWall_API}}/posts",
+					"host": [
+						"{{metaWall_API}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增一筆貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"charlie\",\r\n    \"content\":\"晚上出門運動\",\r\n    \"tags\":[\"運動\", \"休閒\"],\r\n    \"type\":\"person\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{metaWall_API}}/posts",
+					"host": [
+						"{{metaWall_API}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{metaWall_API}}/posts",
+					"host": [
+						"{{metaWall_API}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除一筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{metaWall_API}}/posts/62b48fb480d84d8db86852af",
+					"host": [
+						"{{metaWall_API}}"
+					],
+					"path": [
+						"posts",
+						"62b48fb480d84d8db86852af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Allen\",\r\n    \"tags\": [\"喜\", \"怒\", \"樂\"],\r\n    \"type\": \"person\",\r\n    \"content\": \"今天我要刷牙牙\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{metaWall_API}}/posts/62b48fb480d84d8db86852af",
+					"host": [
+						"{{metaWall_API}}"
+					],
+					"path": [
+						"posts",
+						"62b48fb480d84d8db86852af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OPTIONS",
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "{{metaWall_API}}/posts",
+					"host": [
+						"{{metaWall_API}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 無對應路由",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{metaWall_API}}/tesdfdy",
+					"host": [
+						"{{metaWall_API}}"
+					],
+					"path": [
+						"tesdfdy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
